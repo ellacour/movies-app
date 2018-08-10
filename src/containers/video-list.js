@@ -1,17 +1,15 @@
 import React from 'react'
-import uuidv4 from 'uuid/v4'
 
 import VideoListItem from '../components/video-list-item'
 
-const movies = ['film1', 'film2', 'film3', 'film4', 'film5'];
-
-const VideoList = () => {
+const VideoList = ({moviesList}) => {
   return (
     <div>
       <ul>
         {
-          movies.map(movie => {
-            return <VideoListItem key={uuidv4()} movie={movie} />
+          moviesList.map(movie => {
+            console.log(movie);
+            return <VideoListItem key={movie.id} movie={movie} />
           })
         }
       </ul>
