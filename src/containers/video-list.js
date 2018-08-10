@@ -8,7 +8,6 @@ const VideoList = ({moviesList}) => {
       <ul>
         {
           moviesList.map(movie => {
-            console.log(movie);
             return <VideoListItem key={movie.id} movie={movie} />
           })
         }
