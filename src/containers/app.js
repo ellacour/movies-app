@@ -15,19 +15,30 @@ class App extends Component {
     this.state = { moviesList: {}, currentMovie: {} }
   }
   componentWillMount() {
-    axios.get(`${API_END_POINT}${POPULAR_MOVIES_URL}&${API_KEY}`).then(function (response) {
-      this.setState({ moviesList:response.data.results.slice(1, 6) });
-      this.setState({ currentMovie:response.data.results[0] });
-      console.log(this.state.moviesList, this.state.currentMovie);
-    }.bind(this));
+    this.initMovies();
   };
 
+  initMovies() {
+    axios.get(`${API_END_POINT}${POPULAR_MOVIES_URL}&${API_KEY}`).then(function (response) {
+    this.setState({ 
+      moviesList: response.data.results.slice(1, 6),
+      currentMovie: response.data.results[0] });
+    }.bind(this));
+  }
+
   render() {
+
+    const renderVideoList = () => {
+      if (this.state.moviesList.length>= 5){
+        return <VideoList moviesList={this.state.moviesList} />
+      }
+    }
+
     return (
       <div>
         <SearchBar />
-        <VideoList />
-        <VideoDetail title={this.state.currentMovie.title} description={this.state.currentMovie.overview}/>
+        {renderVideoList()}
+        <VideoDetail title={this.state.currentMovie.title} description={this.state.currentMovie.overview} />
       </div>
     );
   };
