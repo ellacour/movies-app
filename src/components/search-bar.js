@@ -1,24 +1,26 @@
-import React, {Component}from 'react'
+import React, { Component } from 'react'
 import { timingSafeEqual } from 'crypto';
 
 class SearchBar extends Component {
-  constructor(props){
+  constructor(props) {
     super(props);
-    this.state={
-      searchText:"",
-      placeHolder:"Tapez votre film..."
+    this.state = {
+      searchText: "",
+      placeHolder: "Tapez votre film..."
     }
   }
-  render(){
+  render() {
     return (
-      <div>
-        <input onChange={this.handleChange.bind(this)} placeholder={this.state.placeHolder} />
+      <div className='row'>
+        <div className='col-md-8 mx-auto'>
+          <input type='text' className='form-control input-lg' onChange={this.handleChange.bind(this)} placeholder={this.state.placeHolder} />
+        </div>
       </div>
     )
   }
-  
+
   handleChange(event) {
-    this.setState({searchValue:event.target.value})
+    this.setState({ searchValue: event.target.value })
   }
 
 };
