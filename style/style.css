@@ -1,0 +1,69 @@
+.darkest {
+  background-image: url(../assets/img/cloud-pattern.jpg);
+  background-color: rgba(27, 26, 27, 0.87);
+  background-blend-mode: multiply;
+  color: white;
+}
+
+.app-title {
+  margin-top: 5%;
+  background: -webkit-linear-gradient(135deg, #7BD23F, #F8F441, #7BD23F,#D7F43B,#7BD23F);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 5em;
+  font-family: 'Shadows Into Light', cursive;
+}
+.sub-title {
+  background: -webkit-linear-gradient(135deg, #7BD23F, #F8F441, #7BD23F,#D7F43B,#7BD23F);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 1.7em;
+  font-family: 'Shadows Into Light', cursive;
+  font-weight: 500;
+}
+.movie-title {
+  font-weight: bolder;
+}
+.search-bar-section {
+  margin-top: 5%;
+}
+.video-section {
+  margin-top: 5%;
+}
+.section-title{
+  margin: 2% 0 4%;
+  background: -webkit-linear-gradient(135deg, #7BD23F, #F8F441, #7BD23F,#D7F43B,#7BD23F);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 3.2em;
+  font-family: 'Shadows Into Light', cursive;
+  font-weight: 500;
+}
+.video-detail-section {
+  margin-top: 5%;
+}
+.video-list-section {
+  margin-top: 5%; 
+}
+.video-list-items {
+  -webkit-padding-start: 0px;
+}
+.video-list-image {
+  width: 100px;
+  max-height:150px;
+} 
+.video-list-image-wrapper {
+  display:flex;
+  justify-content: space-around;
+}
+.video-list-item-section {
+  margin: 2% 0;
+}
+.video-list-item-details {
+  /* padding: 3% 0; */
+  max-height: 140px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  /* Required for text-overflow to do anything */
+  /* white-space: nowrap; */
+}

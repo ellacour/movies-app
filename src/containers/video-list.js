@@ -5,7 +5,8 @@ import VideoListItem from '../components/video-list-item'
 const VideoList = ({moviesList}) => {
   return (
     <div>
-      <ul>
+      <h2 className="section-title">Top 5</h2>
+      <ul className="video-list-items">
         {
           moviesList.map(movie => {
             return <VideoListItem key={movie.id} movie={movie} />
