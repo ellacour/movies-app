@@ -4,6 +4,8 @@ import axios from 'axios'
 import SearchBar from '../components/search-bar'
 import VideoDetail from '../components/video-detail'
 import Video from '../components/video'
+import CustomFooter from '../components/footer'
+
 import VideoList from './video-list'
 
 const API_KEY = "api_key=5895fdbccb756f8c7d6ef142b2c6acc9";
@@ -68,6 +70,7 @@ class App extends Component {
         <div className='video-list-section'>
           {renderVideoList()}
         </div>
+        <CustomFooter />
       </div>
     );
   };
