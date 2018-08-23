@@ -6,7 +6,9 @@ class SearchBar extends Component {
     super(props);
     this.state = {
       searchValue: "",
-      placeHolder: "Tapez votre film..."
+      placeHolder: "Rechechez un film...",
+      lockedSearch: false,
+      interval: 1000,
     }
   }
 
@@ -24,16 +26,21 @@ class SearchBar extends Component {
   }
 
   handleChange(event) {
-    // console.log("changed");
-    // console.log(event.target.value)
-    this.setState({ searchValue: event.target.value })
-    // console.log(searchValue)
+    this.setState({ searchValue: event.target.value });
+    if (!this.state.onClickListItem){
+      this.setState({lockedSearch: true})
+      setTimeout(function(){ this.search()}.bind(this), this.state.interval)
+    }
   }
-
+  
   handleSearchText(event) {
+    this.search();
+  }
+  
+  search() {
+    this.setState({lockedSearch: false});
     this.props.callback(this.state.searchValue);
   }
-
 
 };
 
