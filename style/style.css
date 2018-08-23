@@ -32,7 +32,7 @@
 }
 .section-title{
   margin: 2% 0 4%;
-  background: -webkit-linear-gradient(135deg, #7BD23F, #F8F441, #7BD23F,#D7F43B,#7BD23F);
+  background: -webkit-linear-gradient(135deg, #7BD23F, rgb(136, 134, 16), #7BD23F,#D7F43B,#7BD23F);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-size: 3.2em;
@@ -42,6 +42,18 @@
 .video-detail-section {
   margin-top: 5%;
 }
+
+li {
+  padding: 3% 0;
+}
+
+li:hover{
+  background-image: url(../assets/img/cloud-pattern.jpg);
+  background-color: #7BD23F;
+  background-blend-mode: difference;
+  box-shadow: 10px 10px 10px #050706;
+}
+
 .video-list-section {
   margin-top: 5%; 
 }
@@ -59,11 +71,11 @@
 .video-list-item-section {
   margin: 2% 0;
 }
+.video-list-item-title{
+  margin: 1% 0;
+}
 .video-list-item-details {
-  /* padding: 3% 0; */
   max-height: 140px;
   overflow: hidden;
-  text-overflow: ellipsis;
-  /* Required for text-overflow to do anything */
-  /* white-space: nowrap; */
+  text-overflow: ellipsis; 
 }
