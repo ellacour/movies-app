@@ -22,7 +22,10 @@
   font-weight: 500;
 }
 .movie-title {
-  font-weight: bolder;
+  font-size: 1.9em;
+  font-weight: 400;
+  font-family: 'Shadows Into Light', cursive;
+  text-shadow: rgb(0, 0, 0) 4px 4px 10px;
 }
 .search-bar-section {
   margin-top: 5%;
@@ -31,7 +34,7 @@
   margin-top: 5%;
 }
 .section-title{
-  margin: 2% 0 4%;
+  margin: 2% 0 3%;
   background: -webkit-linear-gradient(135deg, #7BD23F, rgb(136, 134, 16), #7BD23F,#D7F43B,#7BD23F);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -50,32 +53,50 @@ li {
 li:hover{
   background-image: url(../assets/img/cloud-pattern.jpg);
   background-color: #7BD23F;
-  background-blend-mode: difference;
+  background-blend-mode: multiply;
   box-shadow: 10px 10px 10px #050706;
 }
 
 .video-list-section {
   margin-top: 5%; 
 }
-.video-list-items {
-  -webkit-padding-start: 0px;
+.video-list-title{
+  margin-bottom: 1%;
 }
 .video-list-image {
   width: 100px;
   max-height:150px;
+  margin: 5px 0;
+  box-shadow: 4px 4px 8px #050706
 } 
 .video-list-image-wrapper {
   display:flex;
   justify-content: space-around;
 }
-.video-list-item-section {
-  margin: 2% 0;
+.video-list-item {
+  border-bottom: 1px solid rgb(59, 110, 24);
 }
 .video-list-item-title{
+  font-size: 1.5em;
+  font-weight: 400;
+  font-family: 'Shadows Into Light', cursive;
   margin: 1% 0;
+  text-shadow: rgb(0, 0, 0) 4px 4px 10px;
 }
-.video-list-item-details {
-  max-height: 140px;
+.movie_overview {
+  max-height: 100px;
   overflow: hidden;
   text-overflow: ellipsis; 
+  text-align: justify;
+  padding-right: 4%;
+}
+.movie_overview_lg{
+  max-height: 300px;
+}
+.custom-link {
+  font-size:1.3em;
+  background: -webkit-linear-gradient(135deg, #7BD23F, #F8F441, #7BD23F,#D7F43B,#7BD23F);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: 'Shadows Into Light', cursive;
 }
